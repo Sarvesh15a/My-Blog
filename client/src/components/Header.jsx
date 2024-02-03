@@ -35,7 +35,7 @@ const Header = () => {
       </button>
 
       <Link to='/signin'>
-      <button  className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-2 py-1  rounded-lg" >
+      <button  className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-2 py-1  rounded-lg outline" >
         Sign In
       </button>
       </Link>
