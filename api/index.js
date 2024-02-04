@@ -1,13 +1,14 @@
-import express from 'express'
+import express, { json } from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import userRoute from '../api/routes/user.route.js'
-
+import authRoute from '../api/routes/auth.routh.js'
 
 dotenv.config();
 
 const app= express();
-
+  app.use(express.json())
+  
 //Database Connection
 
 mongoose.connect(process.env.MONGO).then(()=>{
@@ -25,3 +26,4 @@ app.listen(3000,()=>{
 
 
 app.use("/api/user",userRoute)
+app.use("/api/auth",authRoute)
