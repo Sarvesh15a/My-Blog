@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
 import { signInSuccess , signInStart, signInFailure } from '../redux/user/userSlice';
 import {useDispatch,useSelector} from 'react-redux'
-import OAuth from '../components/OAuth';
+
 
 const Signin = () => {
     const [formData, setFormData]=useState({})
@@ -36,7 +36,7 @@ const Signin = () => {
           
           if(res.ok){
             dispatch(signInSuccess(data))
-            navigate("/")
+            navigate("/dashboard")
           }
       }
       catch(error){
@@ -50,13 +50,13 @@ const Signin = () => {
       md:items-center gap-5">
         {/* left side */}
         <div className="flex-1">
-          <Link to="/" className=' font-bold dark:text-white text-4xl' >
+          <div className=' font-bold dark:text-white text-4xl' >
 
           <span className='px-2 py-1 bg-gradient-to-r from-blue-500
-          via-purple-600 to bg-pink-500 rounded-lg text-white' >Yaduvesh's</span>
-          Blog
-        </Link>
-        <p className='text-sm mt-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facilis enim consequatur quisquam nisi beatae id, explicabo?</p>
+          via-purple-600 to bg-pink-500 rounded-lg text-white' >URL</span>
+          Shortener
+        </div>
+        <p className='text-sm mt-5'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia minima laborum in voluptate saepe tempora recusandae ea debitis!</p>
 
       </div>
         {/* Right side  */}
@@ -83,11 +83,11 @@ const Signin = () => {
                   ):'Sign in'
                 }
               </Button>
-              <OAuth/>
+             
             </form>
             <div className="flex gap-2 text-sm mt-5">
               <span>Don't have an account?</span>
-              <Link to='/signup' className='text-blue-500'>Sign up</Link>
+              <Link to='/' className='text-blue-500'>Sign up</Link>
             </div>   
             <div>
                 <Alert className='mb-5' color='failure'>

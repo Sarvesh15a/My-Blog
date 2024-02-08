@@ -12,30 +12,14 @@ const Header = () => {
        text-sm sm:text-xl font-semibold dark:text-white' >
 
         <span className='px-2 py-1 bg-gradient-to-r from-blue-500
-         via-purple-600 to bg-pink-500 rounded-lg text-white' >Yaduvesh's</span>
-        Blog
+         via-purple-600 to bg-pink-500 rounded-lg text-white' >URL</span>
+        Shortener
       </Link>
 
-      <form>
-        <TextInput
-        type='text'
-        placeholder='Search...'
-        rightIcon={AiOutlineSearch}
-        className='hidden lg:inline'
-        />
-      </form>
-
-      <button className='w-12 h-10 lg:hidden' color='gray'  >
-        <AiOutlineSearch/>
-      </button>
-
      <div className='flex gap-2 md:order-2'>
-     <button className='w-12 h-10 hidden sm:inline ' color='gray' >
-        <FaMoon/>
-      </button>
 
       <Link to='/signin'>
-      <button  className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-2 py-1  rounded-lg outline" >
+      <button  className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-2 py-1  rounded-lg " outline >
         Sign In
       </button>
       </Link>
@@ -43,21 +27,22 @@ const Header = () => {
      </div>
        
      <Navbar.Collapse>
+          
+          <Navbar.Link active={path==="/project"} as={'div'}>
+            <Link to='/dashboard'>
+            Dashboard
+            </Link>
+          </Navbar.Link>
+          
           <Navbar.Link active={path==="/"} as={'div'}>
-            <Link to='/'>
-              Home
+            <Link to='/home'>
+            home
             </Link>
           </Navbar.Link>
           
           <Navbar.Link active={path==="/about"} as={'div'}>
-            <Link to='/about'>
-              About
-            </Link>
-          </Navbar.Link>
-
-          <Navbar.Link active={path==="/project"} as={'div'}>
-            <Link to='/project'>
-              Project
+            <Link to='/dashboard'>
+            About
             </Link>
           </Navbar.Link>
         </Navbar.Collapse>

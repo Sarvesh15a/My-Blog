@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
-import OAuth from '../components/OAuth';
+
 
 const Signup = () => {
     const [formData, setFormData]=useState({})
     const [errorMessage, setErrorMessage]=useState(null);
-    const [loading,setLoading]=useState(false)
+    const [loading, setLoading]=useState(false)
     const navigate = useNavigate();
 
 
@@ -36,7 +36,7 @@ const Signup = () => {
             navigate("/signin")
           }
       }
-      catch(eror){
+      catch(error){
         setErrorMessage(error.message)
         setLoading(false)
       }
@@ -48,12 +48,12 @@ const Signup = () => {
       md:items-center gap-5">
         {/* left side */}
         <div className="flex-1">
-          <Link to="/" className=' font-bold dark:text-white text-4xl' >
+          <div className=' font-bold dark:text-white text-4xl' >
 
           <span className='px-2 py-1 bg-gradient-to-r from-blue-500
-          via-purple-600 to bg-pink-500 rounded-lg text-white' >Yaduvesh's</span>
-          Blog
-        </Link>
+          via-purple-600 to bg-pink-500 rounded-lg text-white' >URL</span>
+          Shortener
+        </div>
         <p className='text-sm mt-5'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti facilis enim consequatur quisquam nisi beatae id, explicabo?</p>
 
       </div>
@@ -85,7 +85,7 @@ const Signup = () => {
                   ):'Sign Up'
                 }
               </Button>
-              <OAuth/>
+              
             </form>
             <div className="flex gap-2 text-sm mt-5">
               <span>Have an account?</span>

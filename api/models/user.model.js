@@ -14,10 +14,10 @@ const userSchema = new mongoose.Schema({
        type: String,
        required:true,
    },
-   profilePicture:{
-    type:String,
-    default:'https://www.google.com/url?sa=i&url=https%3A%2F%2Fsurgassociates.com%2Four-physicians%2Fdr-mohammad-r-siadati%2F610-6104451_image-placeholder-png-user-profile-placeholder-image-png%2F&psig=AOvVaw0KU9UH9WIXKkTXYHTjbMQ1&ust=1707293135455000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOC6j9qgloQDFQAAAAAdAAAAABAE'
-   }
+   
+  longURL :{type:String },
+    shortURL:{type:String },
+  visitHistory: [{ timestamp: { type: Number } }],
    }, 
    {timestamps: true}
    
