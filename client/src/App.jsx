@@ -1,13 +1,12 @@
 import React from 'react'
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 import Home from './pages/Home';
-import About from './pages/About';
 import Signin from './pages/Signin';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
-import Project from './pages/Project';
 import Header from './components/Header';
-import FooterCom from './components/Footer';
+import About from './pages/About';
+
 
 
 const App = () => {
@@ -15,14 +14,12 @@ const App = () => {
     <BrowserRouter>
       <Header/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/about' element={<About/>}/>
+          <Route path='/home' element={<Home/>}/>
           <Route path='/signin' element={<Signin/>}/>
-          <Route path='/signup' element={<Signup/>}/>
+          <Route path='/' element={<Signup/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
-          <Route path='/project' element={<Project/>}/>
+          <Route path='/about' element={<About/>}/>
         </Routes>
-     <FooterCom/>
     </BrowserRouter>
   )
 }
