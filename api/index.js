@@ -4,13 +4,6 @@ import dotenv from 'dotenv'
 import userRoute from '../api/routes/user.route.js'
 import authRoute from '../api/routes/auth.routh.js'
 
-
-
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import shortUrl from './routes/route.js';
-
-
 dotenv.config();
 
 const app= express();
@@ -45,24 +38,5 @@ app.use((err,req,res,next)=>{
         success:false,
         statusCode,
         message
-    });
-});
-
-
-
-
-
-
-// app.use(cors());
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
-
-app.use("/", shortUrl);
-
-app.get('/', (req, res) => {
-    res.status(200).json({
-        "Message": "Server is OK"
     });
 });

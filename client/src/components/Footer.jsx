@@ -1,124 +1,85 @@
-const Footer = () => {
+import { Footer } from 'flowbite-react';
+import { Link } from 'react-router-dom';
+import { BsFacebook, BsInstagram, BsTwitter, BsGithub, BsDribbble } from 'react-icons/bs';
+const FooterCom=()=> {
   return (
-    <>
-      {/* Footer */}
-      <footer className="text-center text-lg-start bg-light text-muted" style={{ marginTop: "40vh" }}>
-        {/* Section: Social media */}
-        <section className="flex justify-center justify-between p-4 border-b">
-          {/* Left */}
-          <div className="me-5 hidden lg:block">
-            <span>Get connected with us on social networks:</span>
+    <Footer container className='border border-t-8 border-teal-500'>
+      <div className='w-full max-w-7xl mx-auto'>
+        <div className='grid w-full justify-between sm:flex md:grid-cols-1'>
+          <div className='mt-5'>
+            <Link
+              to='/'
+              className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white'
+            >
+              <span className='px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white'>
+                Yaduvesh's
+              </span>
+              Blog
+            </Link>
           </div>
-          {/* Left */}
-
-          {/* Right */}
-          <div>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-google"></i>
-            </a>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="" className="me-4 text-reset">
-              <i className="fab fa-github"></i>
-            </a>
+          <div className='grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6'>
+            <div>
+              <Footer.Title title='About' />
+              <Footer.LinkGroup col>
+                <Footer.Link
+                  href='#'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  100 JS Projects
+                </Footer.Link>
+                <Footer.Link
+                  href='/about'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Yaduvesh's Blog
+                </Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title='Follow us' />
+              <Footer.LinkGroup col>
+                <Footer.Link
+                  href='#'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Github
+                </Footer.Link>
+                <Footer.Link href='#'>Discord</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title='Legal' />
+              <Footer.LinkGroup col>
+                <Footer.Link href='#'>Privacy Policy</Footer.Link>
+                <Footer.Link href='#'>Terms &amp; Conditions</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
           </div>
-          {/* Right */}
-        </section>
-        {/* Section: Social media */}
-
-        {/* Section: Links */}
-        <section className="container text-center text-md-start mt-5">
-          {/* Grid row */}
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:gap-8">
-            {/* Grid column */}
-            <div className="mb-4">
-              {/* Content */}
-              <h6 className="text-uppercase font-bold mb-4">
-                <i className="fas fa-gem me-3"></i>Company name
-              </h6>
-              <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
-              </p>
-            </div>
-            {/* Grid column */}
-
-            {/* Grid column */}
-            <div className="mb-4">
-              {/* Links */}
-              <h6 className="text-uppercase font-bold mb-4">Products</h6>
-              <p>
-                <a href="#!" className="text-reset">Angular</a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">React</a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">Vue</a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">Laravel</a>
-              </p>
-            </div>
-            {/* Grid column */}
-
-            {/* Grid column */}
-            <div className="mb-4">
-              {/* Links */}
-              <h6 className="text-uppercase font-bold mb-4">Useful links</h6>
-              <p>
-                <a href="#!" className="text-reset">Pricing</a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">Settings</a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">Orders</a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">Help</a>
-              </p>
-            </div>
-            {/* Grid column */}
-
-            {/* Grid column */}
-            <div className="mb-4">
-              {/* Links */}
-              <h6 className="text-uppercase font-bold mb-4">Contact</h6>
-              <p><i className="fas fa-home me-3"></i> New York, NY 10012, US</p>
-              <p>
-                <i className="fas fa-envelope me-3"></i>
-                info@example.com
-              </p>
-              <p><i className="fas fa-phone me-3"></i> + 01 234 567 88</p>
-              <p><i className="fas fa-print me-3"></i> + 01 234 567 89</p>
-            </div>
-            {/* Grid column */}
-          </div>
-          {/* Grid row */}
-        </section>
-        {/* Section: Links */}
-
-        {/* Copyright */}
-        <div className="text-center py-4" style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
-          © 2024 Copyright:
-          <a className="font-bold text-reset" href="https://github.com/Sarvesh15a/URL-Shortner.git">Sarvesh Kumar Yadav(URL Shortner)</a>
         </div>
-        {/* Copyright */}
-      </footer>
-      {/* Footer */}
-    </>
-  )
+        <Footer.Divider />
+        <div className='w-full sm:flex sm:items-center sm:justify-between'>
+          <Footer.Copyright
+            href='#'
+            by="Yaduvesh's blog"
+            year={new Date().getFullYear()}
+          />
+          <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
+            <Footer.Icon href='#' icon={BsFacebook}/>
+            <Footer.Icon href='#' icon={BsInstagram}/>
+            <Footer.Icon href='#' icon={BsTwitter}/>
+            <Footer.Icon href='#' icon={BsGithub}/>
+            <Footer.Icon href='#' icon={BsDribbble}/>
+
+          </div>
+        </div>
+      </div>
+    </Footer>
+  );
 }
 
-export default Footer
+
+
+export default FooterCom

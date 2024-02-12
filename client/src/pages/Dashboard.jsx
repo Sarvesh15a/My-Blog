@@ -1,17 +1,9 @@
-import "./dash.css";
-import Body from './../components/body';
-import Footer from './../components/footer';
-import { ToastContextProvider } from './../components/context/ToastContext';
+import React from 'react'
 
-const  Dashboard  = () =>{
+const Dashboard = () => {
   return (
-    <>
-    <ToastContextProvider>
-    <Body/>
-    <Footer/>
-    </ToastContextProvider>
-    </>
+    <div>Dashboard</div>
   )
 }
 
-export default  Dashboard ;
+export default Dashboard
