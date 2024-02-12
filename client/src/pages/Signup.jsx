@@ -6,7 +6,7 @@ import OAuth from '../components/OAuth';
 const Signup = () => {
     const [formData, setFormData]=useState({})
     const [errorMessage, setErrorMessage]=useState(null);
-    const [loading,setLoading]=useState(false)
+    const [loading, setLoading]=useState(false)
     const navigate = useNavigate();
 
 
@@ -36,7 +36,7 @@ const Signup = () => {
             navigate("/signin")
           }
       }
-      catch(eror){
+      catch(error){
         setErrorMessage(error.message)
         setLoading(false)
       }

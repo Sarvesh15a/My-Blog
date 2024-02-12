@@ -1,4 +1,4 @@
-import { Navbar, TextInput } from 'flowbite-react'
+import { Navbar, TextInput , Button } from 'flowbite-react'
 import React from 'react'
 import { Link , useLocation} from 'react-router-dom'
 import {AiOutlineSearch} from "react-icons/ai"
@@ -35,9 +35,9 @@ const Header = () => {
       </button>
 
       <Link to='/signin'>
-      <button  className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 px-2 py-1  rounded-lg outline" >
-        Sign In
-      </button>
+      <Button gradientDuoTone='purpleToBlue' outline>
+              Sign In
+       </Button>
       </Link>
        <Navbar.Toggle/>
      </div>
