@@ -17,7 +17,12 @@ const userSchema = new mongoose.Schema({
    profilePicture:{
     type:String,
     default:'https://www.shareicon.net/data/128x128/2016/05/24/770137_man_512x512.png'
-   }
+   },
+   isAdmin:{
+    type:Boolean,
+    default:false,
+   },
+
    }, 
    {timestamps: true}
    
