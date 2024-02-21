@@ -5,6 +5,7 @@ import userRoute from '../api/routes/user.route.js'
 import authRoute from '../api/routes/auth.routh.js'
 import cookieParser from 'cookie-parser'
 import postRoutes from './routes/post.route.js'
+import commentRoutes from './routes/comment.route.js';
 
 dotenv.config();
 
@@ -32,7 +33,7 @@ app.use(cookieParser());
 app.use("/api/user",userRoute)
 app.use("/api/auth",authRoute)
 app.use('/api/post',postRoutes)
-
+app.use('/api/comment', commentRoutes);
 
 // add middelware for handlening error
 
