@@ -68,7 +68,7 @@ const CreatePost = () => {
         return;
       }
 
-      else{
+      if (res.ok) {
         setPublishError(null);
         navigate(`/post/${data.slug}`);
       }
